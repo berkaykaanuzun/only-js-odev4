@@ -49,7 +49,7 @@ team1table.addEventListener("click", function () {
 name1btn.addEventListener("click" , function(){
   function editName1(){
     name1btn = prompt("1. Takımın İsmini Giriniz");
-    if(name1btn != ""){
+    if(name1btn != null && name1btn != ""  ){
       team1name.innerText = name1btn;
     }
 else{
@@ -95,7 +95,7 @@ team2table.addEventListener("click", function () {
 name2btn.addEventListener("click" , function(){
   function editName2(){
     name2btn = prompt("2. Takımın İsmini Giriniz");
-    if(name2btn != ""){
+    if(name2btn != null && name2btn != ""  ){
       team2name.innerText = name2btn;
     }
 else{

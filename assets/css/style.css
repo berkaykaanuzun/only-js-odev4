@@ -1,12 +1,15 @@
+body {
+  background-image: url(../images/bg.jpg);
+}
 .bg-gradient__score {
   background: rgb(108, 117, 125);
   background: linear-gradient(
     0deg,
     rgba(108, 117, 125, 1) 0%,
-    rgba(108, 117, 125, 1) 2%,
+    rgba(108, 117, 125, 0.8) 2%,
     rgba(44, 110, 253, 0.95) 50%,
-    rgba(108, 117, 125, 1) 98%,
-    rgba(108, 117, 125, 1) 100%
+    rgba(108, 117, 125, 0) 98%,
+    rgba(108, 117, 125, 0) 100%
   );
   display: inline-block;
 }
