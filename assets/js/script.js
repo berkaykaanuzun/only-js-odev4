@@ -4,6 +4,8 @@ let score1span = document.getElementById("score1");
 let score1 = parseInt(document.getElementById("score1").innerHTML);
 let team1inc = document.getElementById("team1inc");
 let team1dec = document.getElementById("team1dec");
+let team1name = document.getElementById("team1name");
+let name1btn = document.getElementById("name1btn");
 
 ///////////////// Team 2 /////////////
 
@@ -12,7 +14,8 @@ let score2span = document.getElementById("score2");
 let score2 = parseInt(document.getElementById("score2").innerHTML);
 let team2inc = document.getElementById("team2inc");
 let team2dec = document.getElementById("team2dec");
-
+let team2name = document.getElementById("team2name");
+let name2btn = document.getElementById("name2btn");
 //----------------- ------------TEAM 1-----------------------------//
 
 team1inc.addEventListener("click", function () {
@@ -43,6 +46,14 @@ team1table.addEventListener("click", function () {
   promptScore1();
 });
 
+name1btn.addEventListener("click" , function(){
+  function editName1(){
+  name1btn = prompt("1. Takımın İsmini Giriniz");
+  team1name.innerText = name1btn;
+}
+editName1();
+})
+
 //----------------- ------------TEAM 2-----------------------------//
 
 team2inc.addEventListener("click", function () {
@@ -72,3 +83,13 @@ function promptScore2() {
 team2table.addEventListener("click", function () {
   promptScore2();
 });
+
+
+
+name2btn.addEventListener("click" , function(){
+  function editName2(){
+  name2btn = prompt("2. Takımın İsmini Giriniz");
+  team2name.innerText = name2btn;
+}
+editName2();
+})

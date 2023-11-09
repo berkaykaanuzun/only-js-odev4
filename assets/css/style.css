@@ -23,7 +23,9 @@ display: inline-block;
 .team-logo-2 img{
     max-width: 245px;
 }
-
+.gx-20{
+    --bs-gutter-x: 20rem;
+}
 @media (max-width: 768px){
     .spans{
         width: 200px !important;
@@ -32,4 +34,17 @@ display: inline-block;
         align-items: center;
         justify-content: center;
     }
+    .gx-20{
+        --bs-gutter-x: 0 ;
+    }
 }
+
+#team1table:hover{
+    cursor: pointer;
+}
+
+#team2table:hover{
+    cursor: pointer;
+}
+
+
