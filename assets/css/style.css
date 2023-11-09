@@ -1,5 +1,6 @@
 body {
   background-image: url(../images/bg.jpg);
+  overflow-x: hidden;
 }
 .bg-gradient__score {
   background: rgb(108, 117, 125);
@@ -36,16 +37,79 @@ body {
 .gx-20 {
   --bs-gutter-x: 20rem;
 }
-@media (max-width: 768px) {
-  .spans {
+@media (max-width: 992px) {
+  /* .spans {
     width: 200px !important;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+  .gx-20 {
+    --bs-gutter-x: 5rem;
+  }
+}
+@media (max-width: 1400px) {
+  .spans {
+    width: 100% !important;
     height: 200px;
     display: flex;
     align-items: center;
     justify-content: center;
   }
   .gx-20 {
-    --bs-gutter-x: 0;
+    --bs-gutter-x: 5rem;
+  }
+}
+@media (max-width: 1200px) {
+  .spans {
+    width: 100% !important;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gx-20 {
+    --bs-gutter-x: 5rem;
+  }
+}
+@media (max-width: 992px) {
+  .spans {
+    width: 100% !important;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gx-20 {
+    --bs-gutter-x: 5rem;
+  }
+}
+@media (max-width: 768px) {
+  .spans {
+    width: 100% !important;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gx-20 {
+    --bs-gutter-x: 5rem;
+  }
+}
+@media (max-width: 576px) {
+  .spans {
+    width: 100% !important;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .spans span{
+    font-size: 6rem;
+  }
+  .gx-20 {
+    --bs-gutter-x: 5rem;
   }
 }
 
