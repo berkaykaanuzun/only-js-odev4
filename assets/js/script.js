@@ -33,7 +33,7 @@ if (typeof score1span == Number) {
 
 function promptScore1() {
   score1 = prompt("Skoru Giriniz. (TAM SAYI) 1");
-  if (score1 != null && score1 != "" && score1 == Number) {
+  if (score1 != null && score1 != "" || score1 == Number) {
     score1 = parseInt(score1);
     score1span.innerHTML = score1;
   } else {
@@ -48,8 +48,14 @@ team1table.addEventListener("click", function () {
 
 name1btn.addEventListener("click" , function(){
   function editName1(){
-  name1btn = prompt("1. Takımın İsmini Giriniz");
-  team1name.innerText = name1btn;
+    name1btn = prompt("1. Takımın İsmini Giriniz");
+    if(name1btn != ""){
+      team1name.innerText = name1btn;
+    }
+else{
+ alert("Lütfen Boş Bırakmayınız!")
+}
+
 }
 editName1();
 })
@@ -71,11 +77,11 @@ if (typeof score2span == Number) {
 
 function promptScore2() {
   score2 = prompt("Skoru Giriniz. (TAM SAYI) 2");
-  if (score2 != null && score2 != "" && score1 == Number) {
+  if (score2 != null && score2 != "" || score1 == Number) {
     score2 = parseInt(score2);
     score2span.innerHTML = score2;
   } else {
-    alert("Lütfen boş bırakmayınız!");
+    alert("Lütfen Tam Sayı Giriniz!");
   }
   console.log(typeof score2);
 }
@@ -88,8 +94,14 @@ team2table.addEventListener("click", function () {
 
 name2btn.addEventListener("click" , function(){
   function editName2(){
-  name2btn = prompt("2. Takımın İsmini Giriniz");
-  team2name.innerText = name2btn;
+    name2btn = prompt("2. Takımın İsmini Giriniz");
+    if(name2btn != ""){
+      team2name.innerText = name2btn;
+    }
+else{
+ alert("Lütfen Boş Bırakmayınız!")
+}
+
 }
 editName2();
 })
