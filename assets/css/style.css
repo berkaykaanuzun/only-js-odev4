@@ -1,0 +1,35 @@
+.bg-gradient__score{
+ background: rgb(59,59,59);
+background: linear-gradient(0deg, rgba(59,59,59,1) 0%, rgba(25,25,25,1) 100%) ;
+display: inline-block;
+}
+
+.score{
+    font-size: 10rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.spans{
+    width: 300px !important;
+}
+.spans span{
+    text-align: center !important;
+}
+
+.team-logo-1 img{
+    max-width: 280px !important;
+}
+.team-logo-2 img{
+    max-width: 245px;
+}
+
+@media (max-width: 768px){
+    .spans{
+        width: 200px !important;
+        height: 200px;
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+    }
+}
