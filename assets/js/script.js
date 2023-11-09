@@ -24,24 +24,41 @@ team1inc.addEventListener("click", function () {
 });
 
 team1dec.addEventListener("click", function () {
-  score1 -= 1;
-  score1span.innerHTML = score1;
+  if (score1 > 0) {
+    score1 -= 1;
+    score1span.innerHTML = score1;
+  }
 });
 
 if (typeof score1span == Number) {
 }
 
 function promptScore1() {
-  score1 = prompt("Skoru Giriniz. (TAM SAYI) 1");
-  if ((score1 != null && score1 != "") || score1 == Number) {
-    score1 = parseInt(score1);
-    score1span.innerHTML = score1;
+  score1 = prompt("1. Takımın Skorunu Giriniz. (TAM SAYI)");
+  console.log("promptan dönen değer " + typeof score1);
+  if (score1 != null && score1 != "" && score1 < 100 && score1 >= 0) {
+    score1 = Number(score1);
+    if (isNaN(score1)) {
+      alert("Lütfen geçerli bir sayı giriniz!");
+      score1 = 0;
+      score1span.innerHTML = score1;
+    } else {
+      if (Number.isInteger(score1) == false) {
+        alert("Ondalıklı Sayı Girdiniz!");
+        score1 = 0;
+        score1span.innerHTML = score1;
+      } else {
+        console.log("promptan sonra dönen değer " + typeof score1);
+        score1span.innerHTML = score1;
+      }
+    }
   } else {
-    alert("Lütfen Tam Sayı Giriniz!");
+    alert('Lütfen 0 ile 99 Arasında "Tam Sayı" Giriniz!');
+    score1 = 0;
+    score1span.innerHTML = score1;
   }
   console.log(typeof score1);
 }
-
 team1table.addEventListener("click", function () {
   promptScore1();
 });
@@ -66,24 +83,47 @@ team2inc.addEventListener("click", function () {
 });
 
 team2dec.addEventListener("click", function () {
-  score2 -= 1;
-  score2span.innerHTML = score2;
+  if (score2 > 0) {
+    score2 -= 1;
+    score2span.innerHTML = score2;
+  }
 });
 
 if (typeof score2span == Number) {
 }
 
 function promptScore2() {
-  score2 = prompt("Skoru Giriniz. (TAM SAYI) 2");
-  if ((score2 != null && score2 != "") || score1 == Number) {
-    score2 = parseInt(score2);
-    score2span.innerHTML = score2;
+  score2 = prompt("2. Takımın Skorunu Giriniz. (TAM SAYI)");
+  console.log("promptan dönen değer " + typeof score2);
+  if (
+    score2 != null &&
+    score2 != "" &&
+    score2 != " " &&
+    score2 < 100 &&
+    score2 >= 0
+  ) {
+    score2 = Number(score2);
+    if (isNaN(score2)) {
+      alert("Lütfen geçerli bir sayı giriniz!");
+      score2 = 0;
+      score2span.innerHTML = score2;
+    } else {
+      if (Number.isInteger(score2) == false) {
+        alert("Ondalıklı Sayı Girdiniz!");
+        score2 = 0;
+        score2span.innerHTML = score2;
+      } else {
+        console.log("promptan sonra dönen değer " + typeof score2);
+        score2span.innerHTML = score2;
+      }
+    }
   } else {
-    alert("Lütfen Tam Sayı Giriniz!");
+    alert('Lütfen 0 ile 99 Arasında "Tam Sayı" Giriniz!');
+    score2 = 0;
+    score2span.innerHTML = score2;
   }
   console.log(typeof score2);
 }
-
 team2table.addEventListener("click", function () {
   promptScore2();
 });
