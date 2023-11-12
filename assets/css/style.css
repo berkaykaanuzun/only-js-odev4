@@ -1,6 +1,9 @@
 body {
   background-image: url(../images/bg.jpg);
   overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 95vh;
 }
 .bg-gradient__score {
   background: rgb(108, 117, 125);
@@ -105,7 +108,7 @@ body {
     align-items: center;
     justify-content: center;
   }
-  .spans span{
+  .spans span {
     font-size: 6rem;
   }
   .gx-20 {
